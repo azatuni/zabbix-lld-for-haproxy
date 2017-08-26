@@ -1,0 +1,1 @@
+# zabbix-lld-for-haproxy
