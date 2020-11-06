@@ -20,7 +20,7 @@ do
                 then ENDLINE=','                                                                                                                                                             
                 else ENDLINE=""                                                                                                                                                              
         fi                                                                                                                                                                                   
-        BINDPROCESS=`sed -n /$stats/,/^$/p $HAPROXYCONF|grep bind-process|awk '{print $2}'`                                                                                                  
+        BINDPROCESS=`sed -n /$stats/,/^$/p $HAPROXYCONF|grep -m 1 bind-process|awk '{print $2}'`                                                                                                  
         echo -e '\t\t{"{#BINDPROC}":' \"$BINDPROCESS\"'}'$ENDLINE                                                                                                                            
                                                                                                                                                                                              
 done                                                                                                                                                                                         
